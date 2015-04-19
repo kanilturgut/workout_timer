@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:keepScreenOn="true"
+              tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp">
+
+        <EditText
+            android:id="@+id/etCalorie"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="10dp"
+            android:hint="Calorie"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etDistance"
+            android:inputType="numberDecimal"
+            android:hint="Distance"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etStatus"
+            android:inputType="numberDecimal"
+            android:hint="Status 0:bad 1:normal 2:good 3:perfect"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/bSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
