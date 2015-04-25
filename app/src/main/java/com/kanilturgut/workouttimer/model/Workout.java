@@ -82,6 +82,7 @@ public class Workout {
 
         workout.setId(jsonObject.optString("_id"));
 //        workout.setDate((Date) jsonObject.opt("date"));
+        // TODO fix date
         workout.setCalorie(jsonObject.optDouble("calorie"));
         workout.setDistance(jsonObject.optDouble("distance"));
         workout.setStatus(jsonObject.optInt("status"));
