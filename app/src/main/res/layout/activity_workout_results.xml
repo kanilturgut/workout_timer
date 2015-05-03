@@ -47,6 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <EditText
+            android:id="@+id/etLevel"
+            android:inputType="numberDecimal"
+            android:hint="Level of bike"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <Button
             android:id="@+id/bSend"
             android:layout_width="match_parent"

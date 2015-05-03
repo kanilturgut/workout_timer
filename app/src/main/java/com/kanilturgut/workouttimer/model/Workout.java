@@ -26,6 +26,7 @@ public class Workout {
     double calorie;
     double distance;
     int status;
+    int level;
     int type;
 
     public String getId() {
@@ -76,6 +77,14 @@ public class Workout {
         this.status = status;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public static Workout fromJSON(JSONObject jsonObject) {
 
         Workout workout = new Workout();
@@ -87,6 +96,7 @@ public class Workout {
         workout.setDistance(jsonObject.optDouble("distance"));
         workout.setStatus(jsonObject.optInt("status"));
         workout.setType(jsonObject.optInt("type"));
+        workout.setLevel(jsonObject.optInt("level"));
 
         return workout;
     }
@@ -101,6 +111,7 @@ public class Workout {
             params.put("calorie", workout.getCalorie());
             params.put("distance", workout.getDistance());
             params.put("status", workout.getStatus());
+            params.put("level", workout.getLevel());
 
             return params;
 

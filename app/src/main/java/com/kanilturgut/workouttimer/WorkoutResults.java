@@ -25,7 +25,7 @@ public class WorkoutResults extends BaseActivity {
     private final String TAG = WorkoutResults.class.getSimpleName();
     private Context mContext = this;
 
-    private EditText etCalorie, etDistance, etStatus;
+    private EditText etCalorie, etDistance, etStatus, etLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class WorkoutResults extends BaseActivity {
         etCalorie = (EditText) findViewById(R.id.etCalorie);
         etDistance = (EditText) findViewById(R.id.etDistance);
         etStatus = (EditText) findViewById(R.id.etStatus);
+        etLevel = (EditText) findViewById(R.id.etLevel);
 
         findViewById(R.id.bSend).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,7 @@ public class WorkoutResults extends BaseActivity {
                 String calorie = etCalorie.getText().toString().trim();
                 String distance = etDistance.getText().toString().trim();
                 String status = etStatus.getText().toString().trim();
+                String level = etLevel.getText().toString().trim();
 
                 final Workout workout = new Workout();
 
@@ -56,7 +58,10 @@ public class WorkoutResults extends BaseActivity {
                 if (!status.equals(""))
                     workout.setStatus(Integer.parseInt(status));
 
-                if (calorie.equals("") || distance.equals("") || status.equals("")) {
+                if (!level.equals(""))
+                    workout.setLevel(Integer.parseInt(level));
+
+                if (calorie.equals("") || distance.equals("") || status.equals("") || level.equals("")) {
                     Toast.makeText(mContext, "Empty field(s)", Toast.LENGTH_SHORT).show();
 
                     return;
